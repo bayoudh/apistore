@@ -9,6 +9,7 @@ import {
   JoinColumn,
 } from "typeorm";
 import { Role } from "./Role";
+import { RefreshToken } from './RefreshToken';
 @Entity("users")
 export class User {
   @PrimaryGeneratedColumn("uuid")
@@ -33,7 +34,9 @@ export class User {
   createdAt: Date;
   @UpdateDateColumn({ name: "updated_at" })
   updatedAt: Date;
-  @ManyToOne(()=>Role,(role)=>role.users)
-  @JoinColumn({name:'role_id'})
-  role:Role;
+  @ManyToOne(() => Role, (role) => role.users)
+  @JoinColumn({ name: "role_id" })
+  role: Role;
+  @OneToMany(()=>RefreshToken,(token)=>token.user)
+  refreshToken:RefreshToken[]
 }
