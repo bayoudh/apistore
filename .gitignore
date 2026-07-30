@@ -1,58 +1,7 @@
-# Dependencies
 node_modules/
-
-# Build output
 dist/
-build/
-
-# Environment variables
-.env
-.env.*
-!.env.example
-
-# Logs
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-# Runtime files
-*.pid
-*.seed
-*.pid.lock
-
-# Coverage
-coverage/
-.nyc_output/
-
-# TypeScript
-*.tsbuildinfo
-
-# IDE
-.vscode/
-.idea/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Uploads
-uploads/
-temp/
-tmp/
-
-# Cache
-.cache/
-.eslintcache
-
-# Database (if using SQLite)
 *.sqlite
-*.sqlite3
-
-# Docker
-docker-data/
-
-# Misc
-*.tgz
+.env
+uploads/*
+!uploads/.gitkeep
+coverage/
